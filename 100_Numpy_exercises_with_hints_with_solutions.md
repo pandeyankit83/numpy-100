@@ -8,9 +8,6 @@ and in the numpy documentation. The goal of this collection is to offer a quick 
 and new users but also to provide a set of exercises for those who teach.
 
 
-If you find an error or think you've a better way to solve some of them, feel
-free to open an issue at <https://github.com/rougier/numpy-100>.
-File automatically generated. See the documentation to update questions/answers/hints programmatically.
 
 #### 1. Import the numpy package under the name `np` (★☆☆)
 `hint: import … as`
@@ -569,7 +566,7 @@ print(G)
 `hint: np.put, np.random.choice`
 
 ```python
-# Author: Divakar
+
 
 n = 10
 p = 3
@@ -581,7 +578,7 @@ print(Z)
 `hint: mean(axis=,keepdims=)`
 
 ```python
-# Author: Warren Weckesser
+# Author: Ankit Pandey
 
 X = np.random.rand(5, 10)
 
@@ -597,7 +594,7 @@ print(Y)
 `hint: argsort`
 
 ```python
-# Author: Steve Tjoa
+# Author: Ankit Pandey
 
 Z = np.random.randint(0,10,(3,3))
 print(Z)
@@ -607,7 +604,7 @@ print(Z[Z[:,1].argsort()])
 `hint: any, ~`
 
 ```python
-# Author: Warren Weckesser
+# Author: ANKIT PANDEY
 
 Z = np.random.randint(0,3,(3,10))
 print((~Z.any(axis=0)).any())
@@ -651,7 +648,7 @@ print (Z.name)
 `hint: np.bincount | np.add.at`
 
 ```python
-# Author: Brett Olsen
+# Author: ANKIT PANDEY
 
 Z = np.ones(10)
 I = np.random.randint(0,len(Z),20)
@@ -659,7 +656,7 @@ Z += np.bincount(I, minlength=len(Z))
 print(Z)
 
 # Another solution
-# Author: Bartosz Telenczuk
+
 np.add.at(Z, I, 1)
 print(Z)
 ```
@@ -667,7 +664,7 @@ print(Z)
 `hint: np.bincount`
 
 ```python
-# Author: Alan G Isaac
+
 
 X = [1,2,3,4,5,6]
 I = [1,3,9,3,4,1]
@@ -678,7 +675,7 @@ print(F)
 `hint: np.unique`
 
 ```python
-# Author: Nadav Horesh
+
 
 w,h = 16,16
 I = np.random.randint(0,2,(h,w,3)).astype(np.ubyte)
@@ -703,7 +700,7 @@ print(sum)
 `hint: np.bincount`
 
 ```python
-# Author: Jaime Fernández del Río
+
 
 D = np.random.uniform(0,1,100)
 S = np.random.randint(0,10,100)
@@ -720,7 +717,7 @@ print(pd.Series(D).groupby(S).mean())
 `hint: np.diag`
 
 ```python
-# Author: Mathieu Blondel
+
 
 A = np.random.uniform(0,1,(5,5))
 B = np.random.uniform(0,1,(5,5))
@@ -738,7 +735,7 @@ np.einsum("ij,ji->i", A, B)
 `hint: array[::4]`
 
 ```python
-# Author: Warren Weckesser
+# Author: ANKIT PANDEY
 
 Z = np.array([1,2,3,4,5])
 nz = 3
@@ -758,7 +755,7 @@ print(A * B[:,:,None])
 `hint: array[[]] = array[[]]`
 
 ```python
-# Author: Eelco Hoogendoorn
+# Author: ANKIT Pandey
 
 A = np.arange(25).reshape(5,5)
 A[[0,1]] = A[[1,0]]
@@ -782,7 +779,7 @@ print(G)
 `hint: np.repeat`
 
 ```python
-# Author: Jaime Fernández del Río
+# Author: ANKIT PANDEY
 
 C = np.bincount([1,1,2,3,4,4,6])
 A = np.repeat(np.arange(len(C)), C)
@@ -792,7 +789,7 @@ print(A)
 `hint: np.cumsum`
 
 ```python
-# Author: Jaime Fernández del Río
+# Author: ANKIT PANDEY
 
 def moving_average(a, n=3) :
     ret = np.cumsum(a, dtype=float)
@@ -1092,7 +1089,7 @@ print(U)
 `hint: np.unpackbits`
 
 ```python
-# Author: Warren Weckesser
+# Author: ANKIT PANDEY
 
 I = np.array([0, 1, 2, 3, 15, 16, 32, 64, 128])
 B = ((I.reshape(-1,1) & (2**np.arange(8))) != 0).astype(int)
@@ -1107,7 +1104,7 @@ print(np.unpackbits(I[:, np.newaxis], axis=1))
 `hint: np.ascontiguousarray | np.unique`
 
 ```python
-# Author: Jaime Fernández del Río
+# Author: ANKIT PANDEY
 
 Z = np.random.randint(0,2,(6,3))
 T = np.ascontiguousarray(Z).view(np.dtype((np.void, Z.dtype.itemsize * Z.shape[1])))

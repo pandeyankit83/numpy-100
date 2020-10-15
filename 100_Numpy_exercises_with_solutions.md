@@ -8,9 +8,6 @@ and in the numpy documentation. The goal of this collection is to offer a quick 
 and new users but also to provide a set of exercises for those who teach.
 
 
-If you find an error or think you've a better way to solve some of them, feel
-free to open an issue at <https://github.com/rougier/numpy-100>.
-File automatically generated. See the documentation to update questions/answers/hints programmatically.
 
 #### 1. Import the numpy package under the name `np` (★☆☆)
 
@@ -213,7 +210,7 @@ print(Z)
 
 
 ```python
-# Author: Evgeni Burovski
+# Author: ANKIT PANDEY
 
 Z = np.arange(11)
 Z[(3 < Z) & (Z < 8)] *= -1
@@ -221,7 +218,7 @@ print(Z)
 ```
 #### 26. What is the output of the following script? (★☆☆)
 ```python
-# Author: Jake VanderPlas
+# Author: ANKIT PANDEY
 
 print(sum(range(5),-1))
 from numpy import *
@@ -230,7 +227,7 @@ print(sum(range(5),-1))
 
 
 ```python
-# Author: Jake VanderPlas
+# Author: ANKIT PANDEY
 
 print(sum(range(5),-1))
 from numpy import *
@@ -272,7 +269,7 @@ print(np.array([np.nan]).astype(int).astype(float))
 
 
 ```python
-# Author: Charles R Harris
+# Author: ANKIT PANDEY
 
 Z = np.random.uniform(-10,+10,10)
 print(np.copysign(np.ceil(np.abs(Z)), Z))
@@ -388,7 +385,7 @@ print(Z)
 
 
 ```python
-# Author: Evgeni Burovski
+# Author: ANKIT PANDEY
 
 Z = np.arange(10)
 np.add.reduce(Z)
@@ -448,7 +445,7 @@ print(Z)
 
 
 ```python
-# Author: Evgeni Burovski
+# Author: ANKIT PANDEY
 
 X = np.arange(8)
 Y = X + 0.5
@@ -517,8 +514,7 @@ print(D)
 
 
 ```python
-# Thanks Vikas (https://stackoverflow.com/a/10622758/5989906)
-# & unutbu (https://stackoverflow.com/a/4396247/5989906)
+
 Z = (np.random.rand(10)*100).astype(np.float32)
 Y = Z.view(np.int32)
 Y[:] = Z
@@ -569,7 +565,7 @@ print(G)
 
 
 ```python
-# Author: Divakar
+# Author: ANKIT PANDEY
 
 n = 10
 p = 3
@@ -581,7 +577,7 @@ print(Z)
 
 
 ```python
-# Author: Warren Weckesser
+# Author: ANKIT PANDEY
 
 X = np.random.rand(5, 10)
 
@@ -597,7 +593,7 @@ print(Y)
 
 
 ```python
-# Author: Steve Tjoa
+# Author: ANKIT PANDEY
 
 Z = np.random.randint(0,10,(3,3))
 print(Z)
@@ -607,7 +603,7 @@ print(Z[Z[:,1].argsort()])
 
 
 ```python
-# Author: Warren Weckesser
+# Author: ANKIT PANDEY
 
 Z = np.random.randint(0,3,(3,10))
 print((~Z.any(axis=0)).any())
@@ -651,7 +647,7 @@ print (Z.name)
 
 
 ```python
-# Author: Brett Olsen
+# Author: ANKIT PANDEY
 
 Z = np.ones(10)
 I = np.random.randint(0,len(Z),20)
@@ -659,7 +655,7 @@ Z += np.bincount(I, minlength=len(Z))
 print(Z)
 
 # Another solution
-# Author: Bartosz Telenczuk
+# Author: ANKIT PANDEY
 np.add.at(Z, I, 1)
 print(Z)
 ```
@@ -667,7 +663,7 @@ print(Z)
 
 
 ```python
-# Author: Alan G Isaac
+# Author: ANKIT PANDEY
 
 X = [1,2,3,4,5,6]
 I = [1,3,9,3,4,1]
@@ -678,7 +674,7 @@ print(F)
 
 
 ```python
-# Author: Nadav Horesh
+# Author: ANKIT PANDEY
 
 w,h = 16,16
 I = np.random.randint(0,2,(h,w,3)).astype(np.ubyte)
@@ -703,7 +699,7 @@ print(sum)
 
 
 ```python
-# Author: Jaime Fernández del Río
+# Author: ANKIT PANDEY
 
 D = np.random.uniform(0,1,100)
 S = np.random.randint(0,10,100)
@@ -720,7 +716,7 @@ print(pd.Series(D).groupby(S).mean())
 
 
 ```python
-# Author: Mathieu Blondel
+# Author: ANKIT PANDEY
 
 A = np.random.uniform(0,1,(5,5))
 B = np.random.uniform(0,1,(5,5))
@@ -738,7 +734,7 @@ np.einsum("ij,ji->i", A, B)
 
 
 ```python
-# Author: Warren Weckesser
+# Author: ANKIT PANDEY
 
 Z = np.array([1,2,3,4,5])
 nz = 3
@@ -782,7 +778,7 @@ print(G)
 
 
 ```python
-# Author: Jaime Fernández del Río
+# Author: ANKIT PANDEY
 
 C = np.bincount([1,1,2,3,4,4,6])
 A = np.repeat(np.arange(len(C)), C)
@@ -792,7 +788,7 @@ print(A)
 
 
 ```python
-# Author: Jaime Fernández del Río
+# Author: ANKIT PANDEY
 
 def moving_average(a, n=3) :
     ret = np.cumsum(a, dtype=float)
@@ -1092,7 +1088,7 @@ print(U)
 
 
 ```python
-# Author: Warren Weckesser
+# Author: ANKIT PANDEY
 
 I = np.array([0, 1, 2, 3, 15, 16, 32, 64, 128])
 B = ((I.reshape(-1,1) & (2**np.arange(8))) != 0).astype(int)
@@ -1107,7 +1103,7 @@ print(np.unpackbits(I[:, np.newaxis], axis=1))
 
 
 ```python
-# Author: Jaime Fernández del Río
+# Author: ANKIT PANDEY
 
 Z = np.random.randint(0,2,(6,3))
 T = np.ascontiguousarray(Z).view(np.dtype((np.void, Z.dtype.itemsize * Z.shape[1])))
@@ -1157,7 +1153,7 @@ y_int = np.interp(r_int, r, y)
 
 
 ```python
-# Author: Evgeni Burovski
+# Author: ANKIT PANDEY
 
 X = np.asarray([[1.0, 0.0, 3.0, 8.0],
                 [2.0, 0.0, 1.0, 1.0],
